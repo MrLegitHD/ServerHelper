@@ -1,0 +1,44 @@
+package gm.command;
+
+
+
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+import modul1.comamnds.Feed;
+import modul1.comamnds.HealCommand;
+import modul1.comamnds.Kickother;
+import teamspeak.TS;
+import world.Time;
+import world.Time2;
+
+public class Mainclass extends JavaPlugin {
+	
+	public void onEnable() {
+		
+		this.getCommand("gm").setExecutor(new Gamemodecm());
+		this.getCommand("heal").setExecutor(new HealCommand());
+		this.getCommand("kick").setExecutor(new Kickother());
+		this.getCommand("day").setExecutor(new Time());
+		this.getCommand("night").setExecutor(new Time2());
+		this.getCommand("feed").setExecutor(new Feed());
+		this.getCommand("ts").setExecutor(new TS());
+		this.getCommand("cc").setExecutor(new ChatClear());
+		
+		PluginManager pm = Bukkit.getPluginManager();
+		pm.registerEvents(new JoinListener(), this);
+		
+	}
+	
+
+	PluginManager pm = Bukkit.getPluginManager();
+	
+	
+	
+	    public void onDisable(){
+	    		
+	       
+	    }
+}
+	
+
