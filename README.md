@@ -1,2 +1,2 @@
 # ServerHelper
-Ein Essential auf deustch
+Ein Essential auf deutsch.
